@@ -1,12 +1,41 @@
+import time
 from locust import HttpUser, task, between
 
-class MyUser(HttpUser):
-    wait_time = between(1, 3)  # Time between consecutive tasks
-    
-class MyUser(HttpUser):
-    wait_time = between(1, 3)  # Time between consecutive tasks
+class WebsiteTestUser(HttpUser):
+    wait_time = between(0.5, 3.0)
 
-    @task
-    def my_task(self):
-        self.client.get("/path/to/endpoint")  # Perform a GET request
+    def on_start(self):
+        """ start task """
+        pass
 
+    def on_stop(self):
+        """ task is stopping """
+        pass
+
+    @task(1)
+    def index(self):
+        self.client.get("https://udacitycicd2023.azurewebsites.net/")
+
+    @task(2)
+    def predict(self):
+        self.client.post("/predict",{
+           "CHAS":{
+              "0":0
+           },
+           "RM":{
+              "0":6.575
+           },
+           "TAX":{
+              "0":296.0
+           },
+           "PTRATIO":{
+              "0":15.3
+           },
+           "B":{
+              "0":396.9
+           },
+           "LSTAT":{
+              "0":4.98
+           }
+    },
+    headers="Content-Type: application/json")
