@@ -41,7 +41,6 @@ cd udacitycicd
 3. Create a Python virtual environment:
 ``` bash
 python -m venv udacitycicd
-}
 ```
 4. Activate the virtual environment to start using it. The activation steps depend on your operating system:
 ``` bash
@@ -50,7 +49,6 @@ source udacitycicd/bin/activate
 5. Install all dependencies in the virtual environment and run tests:
 ``` bash
 make all
-}
 ```
 ![make all](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/make-all-result.png?raw=true)
 6. Start the application:
