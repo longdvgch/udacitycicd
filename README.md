@@ -32,13 +32,11 @@ Below is the guide with step-by-step instructions on how to run a Python project
 1. Setup a Azure Cloud Shell and open, clone the repository by SSH:
 ``` bash
 git clone git@github.com:longdvgch/udacitycicd.git
-}
 ```
 ![clone the repository](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/git-clone-success.png?raw=true)
 2. Change directory to new repository cloned:
 ``` bash
 cd udacitycicd
-}
 ```
 3. Create a Python virtual environment:
 ``` bash
@@ -48,7 +46,6 @@ python -m venv udacitycicd
 4. Activate the virtual environment to start using it. The activation steps depend on your operating system:
 ``` bash
 source udacitycicd/bin/activate
-}
 ```
 5. Install all dependencies in the virtual environment and run tests:
 ``` bash
@@ -59,12 +56,10 @@ make all
 6. Start the application:
 ``` bash
 python app.py
-}
 ```
 7. Open Cloud Shell and check that the application is working:
 ``` bash
 ./make_prediction.sh
-}
 ```
 ![make prediction](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/make_prediction_local.png?raw=true)
 8. Create CI by GitHub Actions
@@ -77,7 +72,6 @@ python app.py
 1. Create an App Service in Azure. In this project, my App Service is called udacitycicd2023 and the resource group is called Azuredevops:
 ``` bash
 az webapp up --name udacitycicd2023 --resource-group Azuredevops --sku B1 --logs --runtime "PYTHON:3.9"
-}
 ```
 2. Create Azure Pipeline for app in  Azure  Devops. The steps to set up the pipeline flolowing :
 *Access to https://dev.azure.com and sign in.
@@ -98,18 +92,16 @@ App Service deatails in Azure:
 *Run prediction against Azure Application.
 ``` bash
 ./make_predict_azure_app.sh 
-}
 ```
 ![prediction](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/make-predictions.png?raw=true)
 *Trace streamed log files from deployed application
 ``` bash
 az webapp log tail -g Azuredevops --name udacitycicd2023
-}
 ```
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/webapp-log-tail.png?raw=true)
 *Load test using locust
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-main.png?raw=true)
-	![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-statistics.png?raw=true)
+![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-statistics.png?raw=true)
 
 
 ## Enhancements
