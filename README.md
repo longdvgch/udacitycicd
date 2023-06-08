@@ -27,7 +27,7 @@ A [spreadsheet](https://github.com/longdvgch/Udacitycicd/blob/main/Project_Plan/
 ![Architectural Diagram](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/cicd_diagram.png?raw=true)
 
 Below is the guide with step-by-step instructions on how to run a Python project:
-# Deploy the app in Azure Cloud Shell
+## Deploy the app in Azure Cloud Shell
 
 	1. Setup a Azure Cloud Shell and open, clone the repository by SSH:
 	``` bash
