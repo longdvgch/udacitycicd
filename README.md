@@ -76,17 +76,22 @@ az webapp up --name udacitycicd2023 --resource-group Azuredevops --sku B1 --logs
 * Create a new public project.
 * Select Project Settings and  create a new service connection to Azure Resource Manager and a Agent Pool.
 * Next, back to Azure create a VM and config Agent (VM). Then add the self-hosted agent to the agent pool.
-* Final, create a new pipeline linked to GitHub repo.
+* Final, create a new pipeline linked to GitHub repo. 
+* 
 Pipeline jobs list:
+
 ![pipline](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/piplines-jobs.png?raw=true)
 Pipeline job success details:
+
 ![pipline](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/pipline-job-details.png?raw=true)
 App Service deatails in Azure:
+
 ![App Service](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/webapp.png?raw=true)
 
 3. Check app working:
 * Access to webapp's domain via the browser
 ![webapp page](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/access-domain.png?raw=true)
+
 * Run prediction against Azure Application.
 ``` bash
 ./make_predict_azure_app.sh 
@@ -97,6 +102,7 @@ App Service deatails in Azure:
 az webapp log tail -g Azuredevops --name udacitycicd2023
 ```
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/webapp-log-tail.png?raw=true)
+
 * Load test using locust
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-main.png?raw=true)
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-statistics.png?raw=true)
