@@ -72,11 +72,11 @@ python app.py
 az webapp up --name udacitycicd2023 --resource-group Azuredevops --sku B1 --logs --runtime "PYTHON:3.9"
 ```
 2. Create Azure Pipeline for app in  Azure  Devops. The steps to set up the pipeline flolowing :
-*Access to https://dev.azure.com and sign in.
-*Create a new public project.
-*Select Project Settings and  create a new service connection to Azure Resource Manager and a Agent Pool.
-*Next, back to Azure create a VM and config Agent (VM). Then add the self-hosted agent to the agent pool.
-*Final, create a new pipeline linked to GitHub repo.
+* Access to https://dev.azure.com and sign in.
+* Create a new public project.
+* Select Project Settings and  create a new service connection to Azure Resource Manager and a Agent Pool.
+* Next, back to Azure create a VM and config Agent (VM). Then add the self-hosted agent to the agent pool.
+* Final, create a new pipeline linked to GitHub repo.
 Pipeline jobs list:
 ![pipline](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/piplines-jobs.png?raw=true)
 Pipeline job success details:
@@ -85,19 +85,19 @@ App Service deatails in Azure:
 ![App Service](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/webapp.png?raw=true)
 
 3. Check app working:
-*Access to webapp's domain via the browser
+* Access to webapp's domain via the browser
 ![webapp page](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/access-domain.png?raw=true)
-*Run prediction against Azure Application.
+* Run prediction against Azure Application.
 ``` bash
 ./make_predict_azure_app.sh 
 ```
 ![prediction](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/make-predictions.png?raw=true)
-*Trace streamed log files from deployed application
+* Trace streamed log files from deployed application
 ``` bash
 az webapp log tail -g Azuredevops --name udacitycicd2023
 ```
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/webapp-log-tail.png?raw=true)
-*Load test using locust
+* Load test using locust
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-main.png?raw=true)
 ![webapp log tail](https://github.com/longdvgch/Udacitycicd/blob/main/Screenshot/locust-statistics.png?raw=true)
 
