@@ -1,6 +1,5 @@
+![example workflow](https://github.com/longdvgch/udacitycicd/actions/workflows/main.yml/badge.svg)
 
-By LongDV
-Updated 07/06/2023
 # Overview
 
 This details of 'Building a CI/CD Pipeline' project, that are all of step to deploy a application into Azure webapp service.
